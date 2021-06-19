@@ -1,0 +1,323 @@
+ 
+  body {
+    font-family: Roboto;
+    margin: 0;
+    color: white;
+    background-color: #EAE3D8;
+    background-size: cover;
+  }
+  
+  h1 {
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    font-family: Cinzel;
+    font-size: 6rem;
+    font-weight: 400;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  h2 {
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    font-family: Cinzel;
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 2.5rem 0.5rem 0.5rem 0.5rem;
+  }
+  
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-shadow: 2px 2px 3px black;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+  }
+
+  p {
+    margin: 1rem 1rem 0 1rem;
+    line-height: 1.5;
+  }
+
+  /* Link behavior */
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #F7DC6F;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px white;
+  }
+  
+  a:active {
+    color: #F7DC6F;
+    text-decoration: none;
+  }
+  
+  /* Welcome page background picture */
+  .container {
+    background: url('pictures/_1010319.JPG');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Welcome text box */
+  .textbox {
+    border-radius: 10px;
+    background-color: rgba(255,255,255, .15);
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .subcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .redirect {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px black;
+  }
+
+  /* Right menu */
+  .menu {
+    height: 100vh;
+    width: 10rem; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background: url('pictures/_1010319.JPG');
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden; /* Disable horizontal scroll */
+  }
+
+  .menu a {
+    padding: 1rem 3rem 0 3rem;
+  }
+
+  .hide {
+    visibility: hidden;
+  }
+      
+  .myDIV:hover + .hide {
+    visibility: visible;
+    white-space: nowrap;
+  }
+  
+  .attribute {
+    display:inline-block;
+    color:white;
+  }
+
+  div.attribute a {
+    padding: 0;
+  }
+
+  /* Content */
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  h2.home {
+    margin-right: 10.5rem;
+  }
+
+  .contact-sheet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .mat-cutout {
+    width: 14rem;
+    height: 14rem;
+    cursor: pointer;
+    margin: 5rem;
+    background-clip: border-box;
+    box-shadow: 0 0 0 60px #F7F9F9;
+    background: linear-gradient(to bottom right, #B3B6B7, #D0D3D4);
+    padding: 4px;
+  }
+
+  .mat-cutout:hover {
+    /*background: radial-gradient(orange 70%, rgb(255, 102, 0));*/
+    background: radial-gradient(rgb(40,40,40) 70%, rgb(50,50,50));
+    box-shadow: 0 0 0 60px rgb(20,20,20);
+  }
+
+  .mat-cutout-image > img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+  }
+
+  .bodybox {
+    width: 90%;
+    height: 65%;
+    border-radius: 5px;
+    background-color: rgb(50,50,50);
+    padding: 15px;
+    margin: 1rem;
+  }
+
+  .textflex {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  .bodybox-img > img {
+    float: right;
+    width: 300px;
+    margin: 0.5rem;
+    cursor: pointer;
+  }
+
+  /* The Modal*/
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    padding-top: 50px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(234, 227, 216, 0.9);
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    max-height: 80%;
+    max-width: 70%;
+    object-fit: cover;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 70%;
+    max-width: 70%;
+    text-align: center;
+    color: black;
+    padding: 10px 0;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.3s;
+    animation-name: zoom;
+    animation-duration: 0.3s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: grey;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Behavior on Smaller Screens */
+  @media only screen and (max-width: 700px) {
+    .textbox {
+      flex-direction: column;
+    }
+    .subcontainer {
+      margin: 0 1rem 2rem 1rem;
+    }
+    .redirect {
+      margin-top: 1rem;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    h3 {
+      margin: 0;
+    }
+    .menu {
+      width: 6rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h2.home {
+      margin-right: 6.5rem;
+    }
+    .contact-sheet {
+      margin-top: 0rem;
+      margin-bottom: 1rem;
+      margin-right: 6rem;
+    }
+    .modal-content {
+      width: 100%;
+    }
+    .bodybox {
+      width: 80%;
+    }
+    .textflex {
+      display: block;
+    }
+    .bodybox-img > img {
+      width: 60vw;
+    }
+  }
+  
